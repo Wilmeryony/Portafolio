@@ -25,8 +25,9 @@ export function Contact() {
                   ...styles.card,
                   display: 'flex',
                   alignItems: 'center',
-                  gap: '1rem',
-                  padding: '0.95rem 1.05rem',
+                  gap: '0.85rem',
+                  padding: '0.9rem 1rem',
+                  minWidth: 0,
                 }}
                 onMouseEnter={e => {
                   e.currentTarget.style.borderColor = 'var(--color-accent)'
@@ -38,17 +39,17 @@ export function Contact() {
                 }}
               >
                 <span style={{ fontSize: '1.2rem' }}>{link.icon}</span>
-                <div style={{ ...styles.flexColumn, gap: 2 }}>
+                <div style={{ ...styles.flexColumn, gap: 2, minWidth: 0, flex: 1 }}>
                   <span style={{ ...styles.textXs, color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.12em' }}>
                     {link.label}
                   </span>
-                  <span style={styles.textSm}>{link.value}</span>
+                  <span style={{ ...styles.textSm, overflowWrap: 'anywhere', wordBreak: 'break-word' }}>{link.value}</span>
                 </div>
               </a>
             ))}
           </div>
 
-          <div style={{ ...styles.card, ...styles.flexColumn, gap: '1rem', background: 'linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(45, 212, 191, 0.08))', border: '1px solid rgba(124, 144, 255, 0.16)' }}>
+          <div style={{ ...styles.card, ...styles.flexColumn, gap: '0.9rem', background: 'linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(45, 212, 191, 0.08))', border: '1px solid rgba(124, 144, 255, 0.16)', padding: '1.1rem' }}>
             <p style={styles.textMuted}>
               Estoy disponible para proyectos freelance, colaboraciones y oportunidades laborales.
             </p>

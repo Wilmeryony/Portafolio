@@ -129,6 +129,7 @@ export const styles = {
     borderRadius: 9999,
     backgroundColor: 'var(--color-card)',
     border: '1px solid var(--color-border)',
+    boxShadow: '0 4px 12px rgba(15, 23, 42, 0.06)',
   } as CSSProperties,
 
   navLogoImageDark: {
@@ -291,7 +292,7 @@ export const styles = {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '5rem 1.5rem 4rem',
+    padding: '4rem 1.1rem 3rem',
     position: 'relative',
     overflow: 'hidden',
   } as CSSProperties,
@@ -308,8 +309,8 @@ export const styles = {
   heroCard: {
     background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(124, 58, 237, 0.06))',
     border: '1px solid rgba(255, 255, 255, 0.16)',
-    borderRadius: 28,
-    padding: '1.5rem',
+    borderRadius: 24,
+    padding: '1.25rem',
     boxShadow: 'var(--shadow)',
     backdropFilter: 'blur(20px)',
     WebkitBackdropFilter: 'blur(20px)',
@@ -338,7 +339,7 @@ export const styles = {
   } as CSSProperties,
 
   heroSubtitle: {
-    fontSize: '1.08rem',
+    fontSize: '1rem',
     color: 'var(--color-text-muted)',
     lineHeight: 1.7,
   } as CSSProperties,
@@ -347,7 +348,7 @@ export const styles = {
     maxWidth: 560,
     color: 'var(--color-text-muted)',
     lineHeight: 1.8,
-    fontSize: '1rem',
+    fontSize: '0.96rem',
   } as CSSProperties,
 
   heroBtns: {
