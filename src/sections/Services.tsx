@@ -26,9 +26,6 @@ export function Services() {
                 }}
               >
                 <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 4, background: 'linear-gradient(90deg, var(--color-accent), var(--color-accent2))' }} />
-                <div style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', marginBottom: '0.25rem' }}>
-                  <span style={{ ...styles.serviceIcon, opacity: 0.95 }}>{service.icon}</span>
-                </div>
                 <h3 style={styles.serviceTitle}>{service.title}</h3>
                 <p style={{ ...styles.textMuted, ...styles.textSm }}>
                   {service.description}

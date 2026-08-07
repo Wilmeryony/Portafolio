@@ -7,6 +7,7 @@ export function Footer() {
     { label: 'Proyectos', href: '#proyectos' },
     { label: 'Habilidades', href: '#habilidades' },
     { label: 'Contacto', href: '#contacto' },
+    { label: 'Aau1', href: '#aau1' },
   ]
 
   const contact = [

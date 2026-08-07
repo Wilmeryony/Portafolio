@@ -1,12 +1,26 @@
 import { Button } from '../components/Button'
 import { useTheme } from '../hooks/useTheme'
 import { styles } from '../styles/common'
+import { Plasma } from '../components/Plasma'
 
 export function Inicio() {
   const { theme } = useTheme()
 
   return (
     <section id="inicio" className="hero-bg" style={styles.hero}>
+<Plasma 
+    color="#2326d0"
+    speed={1}
+    direction="forward"
+    scale={1}
+    opacity={1}
+    mouseInteractive={false}
+    renderScale={0.55}
+    maxDpr={1.5}
+    targetFps={60}
+    iterations={60}
+/>
+
       <div style={{ ...styles.heroGrid, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }} className="hero-grid-mobile">
         <div style={{ ...styles.flexColumn, gap: '1rem', zIndex: 1 }}>
           <div className="fade-1" style={styles.pill}>Software Engineer Junior · 2026</div>
@@ -27,16 +41,6 @@ export function Inicio() {
             <Button href="#contacto" variant="outline">Hablemos</Button>
           </div>
 
-          <div className="fade-6" style={{ display: 'flex', gap: '0.7rem', flexWrap: 'wrap', marginTop: '0.2rem' }}>
-            <div style={{ ...styles.metricCard, padding: '0.8rem 0.95rem' }}>
-              <strong style={{ fontSize: '0.95rem' }}>PHP · Laravel</strong>
-              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>Stack principal</span>
-            </div>
-            <div style={{ ...styles.metricCard, padding: '0.8rem 0.95rem' }}>
-              <strong style={{ fontSize: '0.95rem' }}>IA aplicada</strong>
-              <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>Automatización</span>
-            </div>
-          </div>
         </div>
 
         <div className="fade-4" style={{ ...styles.heroCard, zIndex: 1, padding: '1.25rem', background: 'linear-gradient(135deg, var(--color-card), rgba(124, 58, 237, 0.06))', border: '1px solid rgba(124, 144, 255, 0.14)' }}>

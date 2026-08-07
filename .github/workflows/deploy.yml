@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-
+#sirve para el botn desde git ejecutarlo
 #  workflow_dispatch:
 
 permissions:
