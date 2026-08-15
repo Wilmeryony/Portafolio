@@ -1,33 +1,17 @@
 import { Button } from '../components/Button'
-import { useTheme } from '../hooks/useTheme'
 import { styles } from '../styles/common'
-import { Plasma } from '../components/Plasma'
 
 export function Inicio() {
-  const { theme } = useTheme()
 
   return (
-    <section id="inicio" className="hero-bg" style={styles.hero}>
-<Plasma 
-    color="#2326d0"
-    speed={1}
-    direction="forward"
-    scale={1}
-    opacity={1}
-    mouseInteractive={false}
-    renderScale={0.55}
-    maxDpr={1.5}
-    targetFps={60}
-    iterations={60}
-/>
-
+    <section id="inicio" style={styles.hero}>
       <div style={{ ...styles.heroGrid, gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }} className="hero-grid-mobile">
         <div style={{ ...styles.flexColumn, gap: '1rem', zIndex: 1 }}>
           <div className="fade-1" style={styles.pill}>Software Engineer Junior · 2026</div>
 
           <h1 className="fade-2" style={{ fontSize: 'clamp(2rem, 5vw, 3.3rem)', fontWeight: 800, lineHeight: 1.05, maxWidth: 720 }}>
             Construyo experiencias digitales{' '}
-            <span style={{ color: 'var(--color-accent)', textShadow: theme === 'dark' ? '0 0 24px rgba(124,58,237,0.2)' : 'none' }}>
+            <span style={{ color: 'var(--color-accent)', textShadow: '0 0 24px rgba(124,58,237,0.2)'}}>
               claras, rápidas y bien pensadas.
             </span>
           </h1>

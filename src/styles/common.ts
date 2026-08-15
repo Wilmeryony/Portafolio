@@ -125,7 +125,7 @@ export const styles = {
     transition: 'all 0.3s ease',
   } as CSSProperties,
 
-  // ── Texto ─────────────────────────────────
+  // ── Texto ────────────────────────────────
   textMuted: {
     color: 'var(--color-text-muted)',
     lineHeight: 1.75,
@@ -259,28 +259,11 @@ export const styles = {
     lineHeight: 1.7,
   } as CSSProperties,
 
-  heroDesc: {
-    maxWidth: 560,
-    color: 'var(--color-text-muted)',
-    lineHeight: 1.8,
-    fontSize: '0.96rem',
-  } as CSSProperties,
-
   heroBtns: {
     display: 'flex',
     gap: '1rem',
     marginTop: '0.5rem',
     flexWrap: 'wrap',
-  } as CSSProperties,
-
-  metricCard: {
-    display: 'flex',
-    flexDirection: 'column',
-    gap: '0.2rem',
-    padding: '0.9rem 1rem',
-    borderRadius: 18,
-    background: 'rgba(255,255,255,0.08)',
-    border: '1px solid rgba(255,255,255,0.12)',
   } as CSSProperties,
 
   // ── Servicios ────────────────────────────
@@ -297,11 +280,6 @@ export const styles = {
     cursor: 'default',
   } as CSSProperties,
 
-  serviceIcon: {
-    fontSize: '2rem',
-    marginBottom: '0.2rem',
-  } as CSSProperties,
-
   serviceTitle: {
     fontSize: '1.1rem',
     fontWeight: 700,
@@ -313,6 +291,61 @@ export const styles = {
     gap: '0.55rem',
     fontSize: '0.88rem',
     color: 'var(--color-text-muted)',
+  } as CSSProperties,
+
+  // ── Contacto ─────────────────────────────
+  contactGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+    gap: '1.5rem',
+    alignItems: 'stretch',
+  } as CSSProperties,
+
+  contactFormCard: {
+    borderRadius: 24,
+    padding: '1.5rem',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '1rem',
+    background: 'linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(45, 212, 191, 0.06))',
+    border: '1px solid rgba(124, 144, 255, 0.16)',
+    boxShadow: 'var(--shadow)',
+    backdropFilter: 'blur(18px)',
+    WebkitBackdropFilter: 'blur(18px)',
+  } as CSSProperties,
+
+  contactInput: {
+    width: '100%',
+    padding: '0.8rem 1rem',
+    borderRadius: 12,
+    border: '1px solid var(--color-border)',
+    background: 'var(--color-card)',
+    color: 'var(--color-text)',
+    fontSize: '0.9rem',
+    fontFamily: 'inherit',
+    outline: 'none',
+    transition: 'border-color 0.2s ease',
+  } as CSSProperties,
+
+  contactLabel: {
+    fontSize: '0.78rem',
+    color: 'var(--color-text-muted)',
+    marginBottom: '0.4rem',
+    textTransform: 'uppercase',
+    letterSpacing: '0.1em',
+  } as CSSProperties,
+
+  contactSendBtn: {
+    padding: '0.85rem',
+    borderRadius: 12,
+    fontWeight: 700,
+    fontSize: '0.95rem',
+    transition: 'all 0.2s ease',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.5rem',
+    width: '100%',
   } as CSSProperties,
 
   // ── Footer ───────────────────────────────

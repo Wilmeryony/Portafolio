@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
 import React from 'react'
-import { useTheme } from '../hooks/useTheme'
 import logo from '../assets/logo.png'
 import { styles } from '../styles/common'
 
-const sections = ['inicio', 'servicios', 'proyectos', 'habilidades', 'contacto',] as const
+const sections = ['inicio', 'servicios', 'habilidades', 'contacto'] as const
 
 export function Navbar() {
-  const { theme, toggleTheme } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
@@ -81,10 +79,7 @@ export function Navbar() {
           <img
             src={logo}
             alt="Wilmer Izquierdo"
-            style={{
-              ...(styles.navLogoImage as React.CSSProperties),
-              filter: theme === 'light' ? 'invert(1)' : 'none',
-            }}
+            style={styles.navLogoImage as React.CSSProperties}
           />
         </a>
 
@@ -102,7 +97,7 @@ export function Navbar() {
             </button>
 
             {menuOpen && (
-              <div className={`mobile-menu ${theme === 'dark' ? 'mobile-menu-dark' : 'mobile-menu-light'}`}>
+              <div className="mobile-menu mobile-menu-dark">
                 <a
                   href="#contacto"
                   style={styles.navContactBadge as React.CSSProperties}
@@ -111,30 +106,15 @@ export function Navbar() {
                   Disponible
                 </a>
                 {renderLinks(true)}
-                <button
-                  onClick={toggleTheme}
-                  style={styles.navThemeButton as React.CSSProperties}
-                  aria-label="Cambiar tema"
-                >
-                  {theme === 'dark' ? '🌙' : '☀️'}
-                </button>
               </div>
             )}
           </div>
         ) : (
-          /* Desktop */
           <div style={styles.navActions as React.CSSProperties}>
             <a href="#contacto" style={styles.navContactBadge as React.CSSProperties}>
               Disponible
             </a>
             {renderLinks(false)}
-            <button
-              onClick={toggleTheme}
-              style={styles.navThemeButton as React.CSSProperties}
-              aria-label="Cambiar tema"
-            >
-              {theme === 'dark' ? '🌙' : '☀️'}
-            </button>
           </div>
         )}
 
