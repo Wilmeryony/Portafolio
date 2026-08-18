@@ -8,7 +8,16 @@ interface Props {
 }
 
 export function AnimatedSection({ children, delay = 0, style, className }: Props) {
+  const isMobile = window.innerWidth < 768
   const ref = useScrollAnimation()
+
+  if (isMobile) {
+    return (
+      <div style={style} className={className}>
+        {children}
+      </div>
+    )
+  }
 
   return (
     <div
