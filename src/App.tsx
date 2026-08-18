@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { Navbar } from './sections/Navbar'
 import { Inicio } from './sections/Inicio'
 import { Services } from './sections/Services'
@@ -7,30 +8,38 @@ import { Footer } from './sections/Footer'
 import { Plasma } from './components/Plasma'
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
 
-      {/* Fondo global — detrás de todo */}
-      <Plasma
-        color="#2326d0"
-        speed={0.6}
-        direction="forward"
-        scale={1}
-        opacity={0.4}
-        mouseInteractive={false}
-        renderScale={0.55}
-        maxDpr={1.5}
-        targetFps={30}
-        iterations={40}
-      />
+      {!isMobile && (
+        <Plasma
+          color="#2326d0"
+          speed={0.3}
+          direction="forward"
+          scale={1}
+          opacity={0.2}
+          mouseInteractive={false}
+          renderScale={isMobile ? 0.15 : 0.3}
+          maxDpr={isMobile ? 0.5 : 1}
+          targetFps={isMobile ? 10 : 20}
+          iterations={isMobile ? 15 : 25}
+        />
+      )}
 
-      {/* Contenido encima del fondo */}
       <div style={{ position: 'relative', zIndex: 1 }}>
         <Navbar />
         <main>
           <Inicio />
           <Services />
-          {/* <Projects /> */}
           <Skills />
           <Contact />
         </main>
