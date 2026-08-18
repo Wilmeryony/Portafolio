@@ -23,15 +23,15 @@ function App() {
       {!isMobile && (
         <Plasma
           color="#2326d0"
-          speed={0.3}
+          speed={0.4}
           direction="forward"
           scale={1}
-          opacity={0.2}
+          opacity={0.3}
           mouseInteractive={false}
-          renderScale={isMobile ? 0.15 : 0.3}
-          maxDpr={isMobile ? 0.5 : 1}
-          targetFps={isMobile ? 10 : 20}
-          iterations={isMobile ? 15 : 25}
+          renderScale={0.3}
+          maxDpr={1}
+          targetFps={20}
+          iterations={25}
         />
       )}
 
