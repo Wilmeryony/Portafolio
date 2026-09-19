@@ -8,6 +8,7 @@ const sections = ['inicio', 'servicios', 'habilidades', 'contacto'] as const
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
@@ -16,7 +17,10 @@ export function Navbar() {
       if (!mobile) setMenuOpen(false)
     }
 
-    const handleScroll = () => setMenuOpen(false)
+    const handleScroll = () => {
+      setMenuOpen(false)
+      setScrolled(window.scrollY > 80)
+    }
 
     handleResize()
     window.addEventListener('resize', handleResize)
@@ -71,8 +75,20 @@ export function Navbar() {
   }
 
   return (
-    <nav style={styles.nav}>
-      <div style={styles.navInner as React.CSSProperties}>
+    <nav style={{
+      ...styles.nav,
+      backgroundColor: scrolled ? 'transparent' : 'var(--color-surface)',
+      borderBottom: scrolled ? '1px solid transparent' : '1px solid var(--color-border)',
+      backdropFilter: scrolled ? 'blur(6px)' : 'blur(18px)',
+      WebkitBackdropFilter: scrolled ? 'blur(6px)' : 'blur(18px)',
+      transition: 'all 0.4s ease',
+    }}>
+      <div style={{
+        ...styles.navInner as React.CSSProperties,
+        background: scrolled ? 'rgba(255,255,255,0.03)' : undefined,
+        boxShadow: scrolled ? 'none' : undefined,
+        border: scrolled ? '1px solid rgba(255,255,255,0.06)' : undefined,
+      }}>
 
         {/* Logo */}
         <a href="#inicio" style={styles.navBrand as React.CSSProperties}>

@@ -19,6 +19,7 @@ function App() {
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
 
+      {/* Desktop: Plasma WebGL */}
       {!isMobile && (
         <Plasma
           color="#2326d0"
@@ -32,6 +33,20 @@ function App() {
           targetFps={30}
           iterations={40}
         />
+      )}
+
+      {/* Mobile: gradiente CSS ligero */}
+      {isMobile && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          zIndex: 0,
+          pointerEvents: 'none',
+          background: `
+            radial-gradient(circle at 20% 20%, rgba(35, 38, 208, 0.25), transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(124, 144, 255, 0.15), transparent 50%)
+          `,
+        }} />
       )}
 
       <div style={{ position: 'relative', zIndex: 1 }}>

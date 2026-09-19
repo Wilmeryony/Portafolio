@@ -1,5 +1,6 @@
 import { Button } from '../components/Button'
 import { styles } from '../styles/common'
+import { Send, Store } from 'lucide-react';
 
 export function Inicio() {
 
@@ -21,8 +22,8 @@ export function Inicio() {
           </p>
 
           <div className="fade-5" style={styles.heroBtns}>
-            <Button href="#proyectos" variant="primary">Ver proyectos</Button>
-            <Button href="#contacto" variant="outline">Hablemos</Button>
+            <Button href="#servicios" variant="outline">Ver servicios <Store /></Button>
+            <Button href="#contacto" variant="outline">Hablemos <Send /></Button>
           </div>
 
         </div>

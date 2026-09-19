@@ -10,13 +10,13 @@ export const contactLinks: ContactLink[] = [
   {
     label: 'GitHub',
     value: 'github.com/wilmerizquierdo',
-    href: 'https://github.com/wilmerizquierdo',
+    href: 'https://github.com/Wilmeryony',
     icon: '💻',
   },
   {
     label: 'LinkedIn',
     value: 'linkedin.com/in/wilmerizquierdo',
-    href: 'https://linkedin.com/in/wilmerizquierdo',
+    href: 'https://www.linkedin.com/in/wilmer-izquierdo-a89587409/',
     icon: '🔗',
   },
   {
